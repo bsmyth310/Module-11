@@ -32,6 +32,8 @@
   Take notes and save it to the backedn-server
   ![](./public/assets/img/Note_Taker.gif)
 
+  ![](./Sample.png)
+
   ## License
 
   This application is covered under the MIT license. Read more at [License: MIT](https://opensource.org/licenses/MIT)
@@ -40,7 +42,9 @@
 
   send me an email
 
-  ## Tests
+  ## Links
+  *https://note-taker-module-11bs.herokuapp.com/
+  *https://github.com/bsmyth310/Module-11-Amazing-JSON
 
   
 
