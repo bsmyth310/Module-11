@@ -1,22 +1,19 @@
+// Import express package
 const express = require("express");
-const apiRoute = require("./routes/apiRoutes");
-const htmlRoute = require("./routes/htmlRoutes");
-// Tells node that we are creating an "express" server
-const app = express();
+const fs = require("fs");
 
-// Sets an initial port. We"ll use this later in our listener
-const PORT = process.env.PORT || 8080;
+var app = express();
+var PORT = process.env.PORT || 3000
 
-// Sets up the Express app to serve static files and handle data parsing
-app.use(express.static("public"));
+// parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
 app.use(express.json());
+app.use("/assets", express.static("./assets"));
 
-//Points our server to a series of "route" files
-app.use("/api",apiRoute);
-app.use("/",htmlRoute);
+require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
-//below starts our server
-app.listen(PORT, function() {
-    console.log("App is listening on PORT: " + PORT);
+app.listen(PORT, () => {
+  console.log(`API server now on port ${PORT}!`);
 });

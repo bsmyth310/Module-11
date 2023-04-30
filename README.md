@@ -20,14 +20,17 @@
 
   Follow the heroku link or Download the files, run npm i, and use node server.js
 
+  ## Actions Taken
+  * Used Express.JS back end to save and retrieve note data from a JSON file.
+  * Created API routing files to request and send responses from the server. 
+  * Created a server file set for the Express back end to handle data parsing and to listen to inputs. 
+  * Used Heroku to access the application via a live URL. 
+  * Completed the bonus section and added a delete function so the user can delete notes. 
+
   ## Usage
 
   Take notes and save it to the backedn-server
   ![](./public/assets/img/Note_Taker.gif)
-
-  ## Credits
-
-  
 
   ## License
 
